@@ -25,4 +25,11 @@ ggplot(
     shape="Penguin species",
     col="Penguin species"
   ) +
-  theme(legend.position = c(0.8, 0.2))
+  theme(legend.position = c(0.8, 0.2)) +
+  scale_color_manual(
+    values = c(
+      "orange",
+      "magenta",
+      "#008888"
+    )
+  )
