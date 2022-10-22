@@ -34,11 +34,12 @@ end_states <- expand_grid(v0_vals, omega_vals) %>%
   )
 
 # Method 2
+states <- c("TAILS","HEADS")
 end_states <- expand_grid(v0_vals, omega_vals) %>%
   mutate(
     tstar = 2*v0_vals/g,
     R = omega_vals*tstar,
-    result = c("TAILS","HEADS")[((2*R)%%2<1)+1]
+    result = states[((2*R)%%2<1)+1]
   )
 
 
